@@ -1,0 +1,124 @@
+$primary-color: #fdfdfd;
+$secondary-color: #111111;
+$tertiary-color: #EEEEEE;
+$error: #ff495f;
+
+
+
+form {
+    width: 23vw;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    
+    &:nth-child(7), &:nth-child(8) {
+        justify-content: flex-start;
+    }
+}
+
+h2 {
+    width: 23vw;
+    margin: 3rem 0 0 3rem;
+}
+
+table {
+    height: 80%;
+    margin-top: 1rem;
+}
+
+a {
+    align-self: flex-end;
+    margin: 0 0 1rem 0;
+}
+
+#home {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    
+    #form {
+        margin: 0 0 0 1.2rem;
+
+        button {
+            margin: 1rem 1rem 0 13rem;
+        }
+    }
+
+    #table {
+        margin: 1.2rem 1.2rem 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button {
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    }
+}
+
+#statisticsPage {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+
+    #statistics {
+        margin: 0 0 0 1.2rem;
+
+        div {
+            margin-top: 4rem;
+            margin: 2rem 0 0 1.2rem;
+        }
+    }
+
+    #xmlReader {
+        margin: 1.2rem 1.2rem 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        #fileInputComponent {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            
+            .mimicButton {
+                transform: translateY(-7px);
+                margin-right: 30vw;
+                margin-left: 2rem;
+                margin-top: 0;
+                font-family: Exo2Bold;
+                padding: 0.4rem 1rem;
+                border: 2px solid $secondary-color;
+                border-radius: 3px;
+                cursor: pointer;
+
+                .mimicError {
+                    background-color: $error;
+                    margin-left: 3px;
+                    color: $tertiary-color;
+                    padding: 0 5px 0 5px;
+                }
+            }
+
+            #xmlInput {
+                display: none;
+            }
+        }
+    }
+
+    a:hover {
+        transform: translateX(-10px);
+    }
+}

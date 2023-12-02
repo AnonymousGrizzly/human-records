@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+  <record>
+    <name>John</name>
+    <surname>Doe</surname>
+    <age>30</age>
+    <address>123 Main St</address>
+    <gender>Male</gender>
+    <weight>75</weight>
+    <height>180</height>
+    <bmi>23.15</bmi>
+    <team>Blue</team>
+  </record>
+  <record>
+    <name>Jane</name>
+    <surname>Smith</surname>
+    <age>25</age>
+    <address>456 Oak St</address>
+    <gender>Female</gender>
+    <weight>60</weight>
+    <height>165</height>
+    <bmi>22.04</bmi>
+    <team>Red</team>
+  </record>
+  <record>
+    <name>Janez</name>
+    <surname>Novak</surname>
+    <age>32</age>
+    <address>123 Glavna Cesta</address>
+    <gender>Male</gender>
+    <weight>76</weight>
+    <height>180</height>
+    <bmi>23.46</bmi>
+    <team>Blue</team>
+  </record>
+  <record>
+    <name>Mary</name>
+    <surname>Johnson</surname>
+    <age>28</age>
+    <address>789 Pine Ave</address>
+    <gender>Female</gender>
+    <weight>65</weight>
+    <height>170</height>
+    <bmi>22.49</bmi>
+    <team>Neutral</team>
+  </record>
+  <record>
+    <name>Michael</name>
+    <surname>Williams</surname>
+    <age>35</age>
+    <address>567 Oak Blvd</address>
+    <gender>Male</gender>
+    <weight>85</weight>
+    <height>185</height>
+    <bmi>24.84</bmi>
+    <team>Red</team>
+  </record>
+  <record>
+    <name>Markus</name>
+    <surname>Johnsonson</surname>
+    <age>28</age>
+    <address>788 Pine Ave</address>
+    <gender>Male</gender>
+    <weight>110</weight>
+    <height>200</height>
+    <bmi>22.49</bmi>
+    <team>Neutral</team>
+  </record>
+  <record>
+    <name>Michael</name>
+    <surname>Williamson</surname>
+    <age>35</age>
+    <address>567 Birch Blvd</address>
+    <gender>Male</gender>
+    <weight>82</weight>
+    <height>185</height>
+    <bmi>22.5</bmi>
+    <team>Red</team>
+  </record>
+</records>
