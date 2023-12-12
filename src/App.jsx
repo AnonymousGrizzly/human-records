@@ -5,11 +5,14 @@ import HomePage from './pages/HomePage'
 import './App.scss'
 import './AppStyle.scss'
 
+// Create a context to share data between components
 export const AppContext = createContext();
 
+// Description: This component is used to create the app
 export default function App() {
   const [dataList, setDataList] = useState([]);
 
+  //Remove a person from the list
   const handleDelete = (index) => {
     setDataList((prevData) => {
       const updatedData = [...prevData];
@@ -18,6 +21,7 @@ export default function App() {
     });
   }
 
+  // Create a context value to share data between components
   const contextValue = {
     dataList,
     setDataList,

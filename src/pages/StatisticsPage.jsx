@@ -4,6 +4,7 @@ import { AppContext } from '../App'
 import XMLReader from '../components/XMLReader'
 import Statistics from '../components/Statistics'
 
+// Description: This component is used to create the statistics page
 export default function StatisticsPage() {
   const { dataList, setDataList } = useContext(AppContext);
 

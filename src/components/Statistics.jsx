@@ -5,10 +5,11 @@ Statistics.propTypes = {
   data: propTypes.array.isRequired,
 }
 
+// Description: This component is used to handle statistics calculations
 export default function Statistics({ data }) {
   const totalLength = data.length;
 
-  //average statistics
+  // average statistics
   const averageAge = data.reduce((sum, person) => sum + parseInt(person.age), 0) / totalLength;
   const averageWeight = data.reduce((sum, person) => sum + parseInt(person.weight), 0)/ totalLength;
   const averageHeight = data.reduce((sum, person) => sum + parseInt(person.height), 0)/ totalLength;

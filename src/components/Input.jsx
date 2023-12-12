@@ -14,6 +14,7 @@ Input.propTypes = {
   register: propTypes.object
 }
 
+// Description: This component is used to handle input fields
 export default function Input({
   type, 
   placeholder, 

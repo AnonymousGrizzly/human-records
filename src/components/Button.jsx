@@ -8,6 +8,7 @@ Button.propTypes = {
   children: propTypes.node
 }
 
+// Description: This component is used to handle buttons
 export default function Button({ onClick, text, className, children }) {
   return (
     <button onClick={onClick} className={className}>

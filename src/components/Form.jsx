@@ -10,10 +10,13 @@ Form.propTypes = {
 
 const team = ['Blue', 'Red', 'Neutral']
 
+// Description: This component is used to create a form
 export default function Form({ onFormSubmit }) {
+    // useForm hook is used to handle form data
     const { register, handleSubmit, reset, formState: {errors}} = useForm()
-
+    
     const onSubmit = handleSubmit((data) => {
+        // Calculate BMI before submitting the form
         const bmi = (parseFloat(data.weight)/Math.pow(parseFloat(data.height)/100, 2)).toFixed(2)
         data.bmi = bmi
         onFormSubmit(data)

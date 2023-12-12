@@ -9,7 +9,7 @@ Table.propTypes = {
   onDelete: propTypes.func.isRequired,
 }
 
-
+// Description: This component is used to create a table and it's search bar
 export default function Table({ data, onDelete }) {
   const columns = useMemo(
     () => [
@@ -26,6 +26,7 @@ export default function Table({ data, onDelete }) {
     []
   )
 
+  // react table hook
   const {
     getTableProps,
     getTableBodyProps,
@@ -36,6 +37,7 @@ export default function Table({ data, onDelete }) {
     setGlobalFilter,
   } = useTable({ columns, data }, useGlobalFilter, useSortBy)
 
+  // global filter
   const { globalFilter } = state
 
   return (

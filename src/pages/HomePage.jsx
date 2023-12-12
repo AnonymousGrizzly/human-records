@@ -4,6 +4,7 @@ import Form from '../components/Form'
 import { AppContext } from '../App'
 import { Link } from 'react-router-dom';
 
+// Description: This component is used to create the home page
 export default function HomePage() {
     const { dataList, setDataList, handleDelete } = useContext(AppContext);
 
