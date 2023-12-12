@@ -1,7 +1,16 @@
-# Human Records OPR
-React App (JavaScript)
+# Human Records
+Human Records, assignment for 'Osnove Računalniškega Programiranja'
 
-## How to run:
+@Author: AnonymousGrizzly, 2023
+
+## Description
+
+This is a simple program that allows you to store information about people in a table. It is written in React (JavaScript) and uses SCSS for styling.
+
+## Installation
+
+Development environment:
+
     git clone https://github.com/AnonymousGrizzly/human-records.git
 
     cd human-records
@@ -10,47 +19,29 @@ React App (JavaScript)
 
     npm start
 
-## App description:
-- screen with:
-    - form about human 
-    - table about humans
-    - calculated fields 
-    - search for human 
-    - delete human 
-    - sort humans 
-    
-- second screen with:
-    - show statistics of all human fields 
-    - more about human 
-    - XML file reader for adding records
+Production environment (localhost:3000):
 
-- design:
-    - brutalism
-    - black and white
-    - clean minimalist
-    - transition-less
-    - SCSS
+    npm run build
 
-*HAPPY HACKING!*  😘
+    npm install -g serve
 
+    serve -s build
 
-## Seminarska naloga OPR navodila
+## Usage
 
-Seminarska naloga naj vsebuje vsaj:
--	Dve spletni strani povezani med seboj
--	Na prvi spletni strani se omogoči vnos v tabelo.
--	Doda se gumb, ki omogoča iskanje po enem polju (npr. Priimek), ki v primeru, da tak priimek obstaja, izpiše podatke tega zapisa na ekran ali nazaj v vnosna polja. Za potrditev najdenega zapisa uporabite polja tipa Boolean, kjer True pomeni, da smo našli zapis, False, pa da takega zapisa ni. Ker JavaScript razlikuje majhne in velike črke uporabite ukaze za pretvorbo stringov, da boste lažje primerjali vnosna in iskana polja ( npr. .toLowerCase())
--	Omogočite brisanje zapisa iz tabele.
--	Na enem polju se pokaže uporaba zaščite z ukazi try catch ( na primer, da polje ni prazno in da ne vsebuje znake, ki niso dovoljeni, ali pogoje za vnos datuma)
--	Eno vnosno polje naj omogoča vnos števil na dve decimalki natančno.
--	Pokažite uporabo radijskih gumbov in spustnega menija. S pomočjo SWITCH stavka posredujte izbiro v kodi za nadaljnji izpis ali izračun.
--	Prikažite izračun vsaj enega rezultata na osnovi polj iz tabele, (Npr. Vsota, povprečje, min, max, …) Rezultat naj bo izpisan na eno decimalno mesto natančno.
--	Nekje na strani morate imeti  gumb ali povezavo, ki omogoči prehod na drugo stan. 
+The program allows you to add, edit and delete people from the table. You can also sort the table by clicking on the column headers. Search bar allows you to search for people by name, surname, age, etc. On second page you can see the statistics of the table. You can also upload the XML file with the data.
 
--	Druga stran prebere XML datoteko, ki jo naredite sami. Datoteka naj vsebuje vsaj 5 zapisov. Zapis mora imeti element, ki bo za vsaj 2 zapisa skupen (npr. »Obcina« ali »Spol« na sliki na naslednji strani) in en številčni element (npr. Starost ali stOtrok – število otrok). 
--	Po skupnem elementu nato seštejte številčni element za vsako vrednost skupnega elementa. V primeru na spodnji sliki npr. seštejte »Stevilo otrok« za Kranj (4), Ljubljana (6) in Jesenice (6), ali pa po spolu seštejte starost. 
--	Za shranjevanje seštevkov uporabite JS tabelo (array). Izpišite tudi sumarno vrstico (skupno število otrok za vse občine (Skupaj: 16)). Rezultat se naj zapiše v obliki HTML tabele (rezultati so znotraj okvirčkov).
--	S pomočjo potrditvenega polja prikažite izpis na osnovi omejitve (npr. samo ženske)
+## Requirements
 
-
-
+- The program must be written in JavaScript.
+- First web page must enable the user to enter data about people (name, surname, age, etc.) and save it in a table.
+- Show the use of radio buttons and a dropdown menu
+- Enable deletion of a record from the table.
+- The table must be sortable by clicking on the column headers.
+- The table must have a search bar that allows you to search for people by name, surname, age, etc.
+- Second web page must show statistics about the data in the table (average age, number of people, etc.).
+- Second web page must have a button that allows you to upload the XML file with the data.
+- Display the calculation of at least one result based on fields from the table
+- Provide a XML file with the data for testing purposes with 5 records.
+- Use a confirmation field to display the output based on a constraint
+- Use a JavaScript array to store the sums. Also, display a summary row
