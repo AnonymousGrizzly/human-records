@@ -64,6 +64,7 @@ a {
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            margin: 0;
         }
     }
 }
@@ -93,13 +94,19 @@ a {
         #fileInputComponent {
             margin: auto;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            width: 40vw;
+
+            div {
+                display: flex;
+                flex-direction: row;
+            }
             
             .mimicButton {
                 transform: translateY(-7px);
-                margin-right: 30vw;
                 margin-left: 2rem;
                 margin-top: 0;
+                margin-bottom: 1rem;
                 font-family: Exo2Bold;
                 padding: 0.4rem 1rem;
                 border: 2px solid $secondary-color;

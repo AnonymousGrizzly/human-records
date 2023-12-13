@@ -10,22 +10,23 @@ XMLReader.propTypes = {
 // Description: This component is used to handle xml file uploads
 export default function XMLReader({ onXMLSubmit }) {
   const [error, setError] = useState(false)
+  const [file, setFile] = useState(null)
 
   const handleFileUpload = (e) => {
     // get file
-    const file = e.target.files[0]
+    const selectedFile = e.target.files[0]
     
-    if (file) {
+    if (selectedFile) {
       // check if file is xml
-      if (file.type !== 'text/xml') {
+      if (selectedFile.type !== 'text/xml') {
         setError(true)
         return
       }
       const reader = new FileReader()
-      // read file as text
-      reader.readAsText(file)
+      // read the contents of the file as text
+      reader.readAsText(selectedFile)
       reader.onload = (e) => {
-        const text = e.target.result;
+        const text = e.target.result
         const xml = new XMLParser().parseFromString(text);
         const records = xml.getElementsByTagName('record').map((record) => {
           // create object from xml
@@ -36,22 +37,29 @@ export default function XMLReader({ onXMLSubmit }) {
           return data
         })
         onXMLSubmit(records)
-      };
+      }
+
+      setFile(selectedFile)
     }
-  }
+  };
 
   return (
     <div id='fileInputComponent'>
-      <Input 
-        type='file'
-        id='xmlInput'
-        onChange={handleFileUpload}
-        pretext='Upload XML File:'
-        />
-      <label htmlFor='xmlInput' className='mimicButton'>
-        CHOOSE FILE
-      {error && <b className='mimicError'>!</b>}
-      </label>
+      <div>
+        <Input 
+          type='file'
+          id='xmlInput'
+          onChange={handleFileUpload}
+          pretext='Upload XML File:'
+          />
+        <label htmlFor='xmlInput' className='mimicButton'>
+          CHOOSE FILE
+        {error && <b className='mimicError'>!</b>}
+        </label>
+      </div>
+        <p>NAME: {file ? file.name : "/"}</p>
+        <p>SIZE: {file ? file.size : "0"}B</p>
+        <p>TYPE: {file ? file.type : "/"}</p>
     </div>
   )
 }

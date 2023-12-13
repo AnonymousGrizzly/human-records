@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import StatisticsRow from './StatisticsRow';
 
 Statistics.propTypes = {
   data: propTypes.array.isRequired,
@@ -46,16 +47,27 @@ export default function Statistics({ data }) {
 
   return (
     <div>
-      <label> Average Age: {averageAge.toFixed(2)}</label>
-      <label> Average Weight: {averageWeight.toFixed(2)}</label>
-      <label> Average Height: {averageHeight.toFixed(2)}</label>
-      <label> Red Team Size: {redTeamSize}</label>
-      <label> Blue Team Size: {blueTeamSize}</label>
-      <label> Neutral Team Size: {neutralTeamSize}</label>
-      <label> Average Red Team Age: {averageRedTeamAge.toFixed(2)}</label>
-      <label> Average Blue Team Age: {averageBlueTeamAge.toFixed(2)}</label>
-      <label> Average Healthy Red Team Age: {averageHealthyRedTeamAge.toFixed(2)}</label>
-      <label> Average Healthy Blue Team Age: {averageHealthyBlueTeamAge.toFixed(2)}</label>
+      <table>
+        <thead>
+          <tr>
+            <th>Statistic</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <StatisticsRow text='Total People' value={totalLength} />
+          <StatisticsRow text='Average Age' value={averageAge.toFixed(2)} />
+          <StatisticsRow text='Average Weight' value={averageWeight.toFixed(1)} />
+          <StatisticsRow text='Average Height' value={averageHeight.toFixed(1)} />
+          <StatisticsRow text='Red Team Size' value={redTeamSize} />
+          <StatisticsRow text='Blue Team Size' value={blueTeamSize} />
+          <StatisticsRow text='Neutral Team Size' value={neutralTeamSize} />
+          <StatisticsRow text='Average Red Team Age' value={averageRedTeamAge.toFixed(2)} />
+          <StatisticsRow text='Average Blue Team Age' value={averageBlueTeamAge.toFixed(2)} />
+          <StatisticsRow text='Average Healthy Red Team Age' value={averageHealthyRedTeamAge.toFixed(2)} />
+          <StatisticsRow text='Average Healthy Blue Team Age' value={averageHealthyBlueTeamAge.toFixed(2)} />
+        </tbody>
+      </table>
     </div>
   )
 }

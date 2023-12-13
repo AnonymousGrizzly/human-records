@@ -9,7 +9,7 @@ Input.propTypes = {
   id: propTypes.string,
   className: propTypes.string,
   pretext: propTypes.string,
-  errors: propTypes.bool,
+  errors: propTypes.any,
   errorText: propTypes.string,
   register: propTypes.object
 }

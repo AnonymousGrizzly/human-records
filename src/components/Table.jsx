@@ -61,7 +61,7 @@ export default function Table({ data, onDelete }) {
                   {column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ' '}
                 </th>
               ))}
-              <th>⬇</th>
+              <th>&#8197;&#8197;&#8197;⬇&#8197;&#8197;&#8197;</th>
             </tr>
           ))}
         </thead>
@@ -76,7 +76,7 @@ export default function Table({ data, onDelete }) {
                   </td>
                 ))}
                 <td>
-                  <Button onClick={() => onDelete(row.index)} text='╳' className={'deleteButton'}/>
+                  <Button onClick={() => onDelete(row.index)} text='╳'/>
                 </td>
               </tr>
             )
